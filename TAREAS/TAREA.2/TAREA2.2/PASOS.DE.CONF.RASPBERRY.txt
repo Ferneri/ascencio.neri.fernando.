@@ -1,0 +1,34 @@
+- Cambiar la IP Laptop
+Estado de la Red
+Conexión Ethernet
+Configuracion de opciones de adaptador
+Ethernet
+Propiedades 
+Protocolo de Internte version 4
+
+
+Poner Ip estatica 192.168.1.x
+Sub Red 255.255.255.0
+
+Puerta en enlace vacia o 4.4.4.4, 8.8.8.8
+
+Al final poner automtico
+
+
+
+	Rasberry
+Terminal
+sudo -s
+cd /etc
+nano dhcpcd.config
+
+en el menu buscar
+
+		  static ip_addres=10.0.0.74/24
+	   	  static routers=10.0.0.255 
+y ponerles un:  (Al principio)
+
+buscar:
+	static ip_addres=192.168.1.23/24
+	static routers=192.168.2.1 
+y borrales el: #
